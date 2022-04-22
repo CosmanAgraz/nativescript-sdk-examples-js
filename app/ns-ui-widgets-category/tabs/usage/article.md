@@ -27,7 +27,13 @@ tabStripItem2.iconClass = "far"; // e.g., FontAвесоме
 let tabStripItems = [tabStripItem1, tabStripItem2];
 tabStrip.items = tabStripItems;
 
-let contentItems = [conterntItem1, contentItem2]; // where contentItem1 and 2 are the layouts/frames that holds the actual content
+const contentItem1 = new TabContentItem();
+contentItem1.content = view1; // where view1 can be anything that extends from class "View"
+
+const contentItem2 = new TabContentItem();
+contentItem2.content = view2;
+
+let contentItems = [contentItem1, contentItem2]; // where contentItem1 and 2 are the layouts/frames that holds the actual content
 
 tabs.tabStrip = tabStrip;
 tabs.items = contentItems;
